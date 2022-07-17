@@ -2,17 +2,15 @@ package manueh.magic_powders_mod.init;
 
 import manueh.magic_powders_mod.Main;
 import manueh.magic_powders_mod.common.items.SyringeItem;
-
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Rarity;
-
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.Food;
+import net.minecraft.item.Item;
+import net.minecraft.item.Rarity;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Effects;
+import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
 
 public class ItemInit {
 
@@ -23,11 +21,11 @@ public class ItemInit {
             () -> new BlockItem(BlockInit.HOOKAH.get(), new Item.Properties().tab(Main.GROUP)));
 
 
-    public static final FoodProperties GOOD_BLUNT = (new FoodProperties.Builder()).nutrition(4).saturationMod(1.2F).effect(new MobEffectInstance(MobEffects.CONFUSION, 350, 1), 1.0F).effect(new MobEffectInstance(MobEffects.GLOWING, 2400, 0), 1.0F).effect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 2400, 0), 1.0F).effect(new MobEffectInstance(MobEffects.BLINDNESS, 100, 0), 1.0F).effect(new MobEffectInstance(MobEffects.REGENERATION, 100, 0), 1.0F).alwaysEat().build();
+    public static final Food GOOD_BLUNT = (new Food.Builder()).nutrition(4).saturationMod(1.2F).effect(new EffectInstance(Effects.CONFUSION, 350, 1), 1.0F).effect(new EffectInstance(Effects.GLOWING, 2400, 0), 1.0F).effect(new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 2400, 0), 1.0F).effect(new EffectInstance(Effects.BLINDNESS, 100, 0), 1.0F).effect(new EffectInstance(Effects.REGENERATION, 100, 0), 1.0F).alwaysEat().build();
 
-    public static final FoodProperties BAD_BLUNT = (new FoodProperties.Builder()).nutrition(4).saturationMod(1.2F).effect(new MobEffectInstance(MobEffects.CONFUSION, 350, 1), 1.0F).effect(new MobEffectInstance(MobEffects.GLOWING, 2400, 0), 1.0F).effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 2400, 0), 1.0F).effect(new MobEffectInstance(MobEffects.BLINDNESS, 100, 0), 1.0F).effect(new MobEffectInstance(MobEffects.POISON, 100, 0), 1.0F).alwaysEat().build();
+    public static final Food BAD_BLUNT = (new Food.Builder()).nutrition(4).saturationMod(1.2F).effect(new EffectInstance(Effects.CONFUSION, 350, 1), 1.0F).effect(new EffectInstance(Effects.GLOWING, 2400, 0), 1.0F).effect(new EffectInstance(Effects.MOVEMENT_SPEED, 2400, 0), 1.0F).effect(new EffectInstance(Effects.BLINDNESS, 100, 0), 1.0F).effect(new EffectInstance(Effects.POISON, 100, 0), 1.0F).alwaysEat().build();
 
-    public static final FoodProperties SYRINGE_FOOD = (new FoodProperties.Builder()).nutrition(4).saturationMod(1.2F).effect(new MobEffectInstance(MobEffects.CONFUSION, 2400, 3), 1.0F).effect(new MobEffectInstance(MobEffects.INVISIBILITY, 2400, 0), 1.0F).effect(new MobEffectInstance(MobEffects.WEAKNESS, 2400, 0), 1.0F).effect(new MobEffectInstance(MobEffects.WITHER, 2400, 0), 1.0F).effect(new MobEffectInstance(MobEffects.LEVITATION, 2400, 0), 1.0F).alwaysEat().build();
+    public static final Food SYRINGE_FOOD = (new Food.Builder()).nutrition(4).saturationMod(1.2F).effect(new EffectInstance(Effects.CONFUSION, 2400, 3), 1.0F).effect(new EffectInstance(Effects.INVISIBILITY, 2400, 0), 1.0F).effect(new EffectInstance(Effects.WEAKNESS, 2400, 0), 1.0F).effect(new EffectInstance(Effects.WITHER, 2400, 0), 1.0F).effect(new EffectInstance(Effects.LEVITATION, 2400, 0), 1.0F).alwaysEat().build();
 
 
     public static final RegistryObject<Item> GOOD_BLUNT_ITEM = ITEMS.register("good_blunt",

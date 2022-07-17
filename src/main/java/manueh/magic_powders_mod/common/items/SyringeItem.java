@@ -1,12 +1,11 @@
 package manueh.magic_powders_mod.common.items;
 
 import manueh.magic_powders_mod.init.ItemInit;
-
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
 
 public class SyringeItem extends Item {
 
@@ -17,9 +16,11 @@ public class SyringeItem extends Item {
 
     }
 
-    public ItemStack finishUsingItem(ItemStack p_40684_, Level p_40685_, LivingEntity p_40686_) {
-        ItemStack itemstack = super.finishUsingItem(p_40684_, p_40685_, p_40686_);
-        return p_40686_ instanceof Player && ((Player)p_40686_).getAbilities().instabuild ? itemstack : new ItemStack(ItemInit.SYRINGE.get());
+    public ItemStack finishUsingItem(ItemStack p_77654_1_, World p_77654_2_, LivingEntity p_77654_3_) {
+        ItemStack itemstack = super.finishUsingItem(p_77654_1_, p_77654_2_, p_77654_3_);
+        return p_77654_3_ instanceof PlayerEntity && ((PlayerEntity)p_77654_3_).abilities.instabuild ? itemstack : new ItemStack(ItemInit.SYRINGE.get());
     }
+
+
 
 }
