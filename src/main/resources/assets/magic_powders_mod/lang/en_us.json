@@ -1,0 +1,8 @@
+{
+  "block.magic_powders_mod.hookah": "Hookah",
+  "item.magic_powders_mod.good_blunt": "Blunt",
+  "item.magic_powders_mod.bad_blunt": "Blunt",
+  "item.magic_powders_mod.syringe": "Syringe",
+  "item.magic_powders_mod.full_syringe": "Full Syringe",
+  "itemGroup.magic_powders_mod": "Magic Powders Mod"
+}

@@ -13,8 +13,8 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
 version = '1.0'
-group = 'manueh.drugs_mod' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'drugs_mod'
+group = 'manueh.magic_powders_mod' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = 'magic_powders_mod'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
