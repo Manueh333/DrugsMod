@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "model": "drugs_mod:block/hookah" }
+    "": { "model": "magic_powders_mod:block/hookah" }
   }
 }
